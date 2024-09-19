@@ -1,0 +1,8 @@
+name : npm test
+on : workflow_dispatch:
+
+jobs:
+  job1:
+    runs-ons: ubuntu-lastest
+    steps:
+    
