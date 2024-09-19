@@ -1,0 +1,9 @@
+name: reusable workflow
+on: 
+  workflow_dispatch:
+
+jobs:
+  call-workflow-1-in-local-repo:
+    uses: .github/workflows/ex4-reusable-workflow.yaml
+    with:
+        NODE_VERSION: 20
