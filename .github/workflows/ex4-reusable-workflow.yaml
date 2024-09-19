@@ -3,7 +3,7 @@ name: Reusable workflow example
 on:
   workflow_call:
     inputs:
-      node_version:
+      NODE_VERSION:
         required: true
         type: string
 
@@ -17,7 +17,7 @@ jobs:
         - name : setup node
           uses: actions/setup-node@v4
           with:
-            node-version: ${{ node_version}}
+            node-version: ${{ NODE_VERSION }}
         - name: run test
           shell: bash
           run: |
