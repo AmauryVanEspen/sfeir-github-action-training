@@ -4,7 +4,7 @@ on:
 
 jobs:
   job1:
-    runs-ons: ubuntu-lastest
+    runs-on: ubuntu-lastest
     steps:
       - name: checkout repo
         uses: actions/checkout@V4
