@@ -11,9 +11,10 @@ jobs:
       - name: install node
         uses: actions/setup-node@v4
         with: 
-          node-version: '14'
+          node-version: 'lts/*'
       - name: run install
-        run: npm install
+        run: 
+          npm install
 
   job2:
     runs-on: ubuntu-lastest
@@ -24,6 +25,8 @@ jobs:
       - name: install node
         uses: actions/setup-node@v4
         with: 
-          node-version: '14'
+          node-version: 'lts/*'
       - name: run npm test
-        run: npm test
+        shell: bash
+        run: 
+          npm test
