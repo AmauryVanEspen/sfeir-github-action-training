@@ -14,3 +14,16 @@ jobs:
           node-version: '14'
       - name: run install
         run: npm install
+
+  job2:
+    runs-on: ubuntu-lastest
+    needs: job1
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@V4
+      - name: install node
+        uses: actions/setup-node@v4
+        with: 
+          node-version: '14'
+      - name: run npm test
+        run: npm test
